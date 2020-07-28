@@ -1,0 +1,20 @@
+{
+  "name": "esn-frontend-inbox-calendar",
+  "version": "0.1.0",
+  "description": "Intermediary frontend module between Calendar Web and Webmail frontends for the OpenPaaS Suite - https://open-paas.org/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "AGPLv3",
+  "dependencies": {
+    "angular": "1.3.20",
+    "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
+    "esn-frontend-calendar": "github:openpaas-suite/esn-frontend-calendar#main",
+    "esn-frontend-mailto-handler": "github:openpaas-suite/esn-frontend-mailto-handler#main",
+    "fullcalendar": "3.9.0",
+    "lodash": "2.4.1"
+  },
+  "devDependencies": {}
+}
