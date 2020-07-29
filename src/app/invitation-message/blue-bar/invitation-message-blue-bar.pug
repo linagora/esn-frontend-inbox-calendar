@@ -34,7 +34,7 @@
         cal-partstat-buttons(event="$ctrl.event", on-participation-change-success="$ctrl.onPartstatChangeSuccess(event)", on-participation-change-error="$ctrl.onPartstatChangeError(err)", show-date-suggestion="$ctrl.showDateSuggestionWindow()")
 
       .cal-blue-bar-videoconference(ng-if="$ctrl.event.xOpenpaasVideoconference")
-        div(dynamic-directive="calendar-videoconference-bluebar")
+        calendar-videoconference-bluebar(videoconference-link="$ctrl.event.xOpenpaasVideoconference")
 
       .cal-blue-bar-actions-container.cal-blue-bar-labelled-value(ng-if="$ctrl.replyAttendee")
         .cal-blue-bar-action-icon.cal-blue-bar-label.replypartstat(ng-switch="$ctrl.replyAttendee.partstat")

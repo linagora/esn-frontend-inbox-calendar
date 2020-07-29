@@ -13,6 +13,7 @@
     "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
     "esn-frontend-calendar": "github:openpaas-suite/esn-frontend-calendar#main",
     "esn-frontend-mailto-handler": "github:openpaas-suite/esn-frontend-mailto-handler#main",
+    "esn-frontend-videoconference-calendar": "github:openpaas-suite/esn-frontend-videoconference-calendar#main",
     "fullcalendar": "3.9.0",
     "lodash": "2.4.1"
   },
