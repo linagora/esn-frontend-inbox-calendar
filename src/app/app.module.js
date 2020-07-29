@@ -5,7 +5,9 @@ angular.module('esn.inbox-calendar', [
   'esn.notification',
   'esn.i18n',
   'esn.calendar.libs',
-  'esn.resource.libs'
+  'esn.resource.libs',
+  'linagora.esn.videoconference',
+  'linagora.esn.videoconference.calendar'
 ]);
 require('esn-frontend-common-libs/src/frontend/js/modules/session.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/notification.js');
