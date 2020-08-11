@@ -1,0 +1,22 @@
+{
+  "%s has accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} принял это событие",
+  "%s has declined this event": "{{ replyAttendee.displayName || replyAttendee.email }} отклонил это событие",
+  "%s has tentatively accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} предварительно принял это событие",
+  "An error occured while getting resource reservation contained in this message.": "Произошла ошибка при получении резервирования ресурса, содержащегося в этом сообщении.",
+  "An error occured while processing meeting information contained in this message.": "Произошла ошибка при обработке информации о собрании, содержащейся в этом сообщении.",
+  "As resource manager, you must accept or decline the request": "Как менеджер ресурсов, вы должны принять или отклонить запрос",
+  "Cannot change the resource reservation": "Невозможно изменить резервирование ресурса",
+  "Cannot change your participation to this event": "Невозможно изменить свое участие в этом мероприятии",
+  "Error while getting updated event": "Ошибка при обновлении события",
+  "Event details": "Детали события",
+  "has been requested for event": "был запрошен на мероприятие",
+  "Some meeting information contained in this message cannot be processed.": "Некоторая информация о собрании, содержащаяся в этом сообщении, не может быть обработана.",
+  "The resource reservation event can not be retrieved.": "Событие резервирования ресурса не может быть получено.",
+  "This event has been cancelled": "Это событие было отменено",
+  "This message contains an invitation to an event": "Это сообщение содержит приглашение на событие",
+  "This message contains an resource to manage": "Это сообщение содержит ресурс для управления",
+  "This message contains some meeting information. Please wait while we fetch the event details...": "Это сообщение содержит некоторую информацию о встрече. Пожалуйста, подождите, пока мы получим информацию о событии ...",
+  "This message contains some resource reservation information. Please wait while we fetch the event details...": "Это сообщение содержит некоторую информацию о резервировании ресурса. Пожалуйста, подождите, пока мы получим информацию о событии ...",
+  "Recurs %s": "рецидивировать {{ event.recurrenceType }}",
+  "Resource reservation confirmed!": "Резервирование ресурсов подтверждено!"
+}

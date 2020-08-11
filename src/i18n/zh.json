@@ -1,0 +1,22 @@
+{
+  "%s has accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }}接受了该事件",
+  "%s has declined this event": "{{ replyAttendee.displayName || replyAttendee.email }}拒绝了该事件",
+  "%s has tentatively accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }}拟接受该事件",
+  "An error occured while getting resource reservation contained in this message.": "获取本消息所含资源预定时出现错误",
+  "An error occured while processing meeting information contained in this message.": "处理消息内会议信息出现错误",
+  "As resource manager, you must accept or decline the request": "作为资源经理，您必须接受或拒绝该请求",
+  "Cannot change the resource reservation": "无法更改资源预留",
+  "Cannot change your participation to this event": "无法更改您对此活动的参与",
+  "Error while getting updated event": "获取更新事件时出错",
+  "Event details": "事件详细信息",
+  "has been requested for event": "已被要求参加活动",
+  "Some meeting information contained in this message cannot be processed.": "无法处理此消息内所含的某些会议信息",
+  "The resource reservation event can not be retrieved.": "资源预定事件无法被撤回",
+  "This event has been cancelled": "该事件已被删除",
+  "This message contains an invitation to an event": "本消息包含一条事件邀请",
+  "This message contains an resource to manage": "本条消息包含一个待管理资源",
+  "This message contains some meeting information. Please wait while we fetch the event details...": "本条消息包含会议信息。请等待，我们正在获取事件详细信息…",
+  "This message contains some resource reservation information. Please wait while we fetch the event details...": "本条消息包含资源预定信息。请等待，我们正在获取事件详细信息…",
+  "Recurs %s": "{{ event.recurrenceType }}重复",
+  "Resource reservation confirmed!": "资源预留已确认!"
+}

@@ -1,0 +1,22 @@
+{
+  "%s has accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} đã chấp nhận sự kiện này",
+  "%s has declined this event": "{{ replyAttendee.displayName || replyAttendee.email }} đã từ chối sự kiện này",
+  "%s has tentatively accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} đã tạm thời chấp nhận sự kiện này",
+  "An error occured while getting resource reservation contained in this message.": "Đã xảy ra lỗi khi truy cập tài nguyên có trong thư này.",
+  "An error occured while processing meeting information contained in this message.": "Có lỗi xảy ra khi đang truy cập thông tin cuộc họp bên trong tin nhắn này.",
+  "As resource manager, you must accept or decline the request": "Là người quản lí tài nguyên, bạn phải đồng ý hoặc từ chối yêu cầu",
+  "Cannot change the resource reservation": "Không thể thay đổi việc đặt trước tài nguyên",
+  "Cannot change your participation to this event": "Không thể thay đổi sự tham gia của bạn đối với sự kiện này",
+  "Error while getting updated event": "Lỗi khi nhận sự kiện được cập nhật",
+  "Event details": "Chi tiết sự kiện",
+  "has been requested for event": "đã được yêu cầu cho sự kiện",
+  "Some meeting information contained in this message cannot be processed.": "Tin nhắn này chứa một số thông tin không thể truy cập.",
+  "The resource reservation event can not be retrieved.": "Không thể truy xuất sự kiện đặt trước tài nguyên.",
+  "This event has been cancelled": "Sự kiện này đã bị hủy",
+  "This message contains an invitation to an event": "Tin nhắn này chứa một lời mời đến một sự kiện",
+  "This message contains an resource to manage": "Thư này chứa một tài nguyên để quản lý",
+  "This message contains some meeting information. Please wait while we fetch the event details...": "Tin nhắn này chứa thông tin cuộc họp. Vui lòng đợi trong khi tải các thông tin chi tiết...",
+  "This message contains some resource reservation information. Please wait while we fetch the event details...": "Thông báo này chứa một số thông tin đặt chỗ tài nguyên. Vui lòng đợi trong khi chúng tôi tìm nạp chi tiết sự kiện...",
+  "Recurs %s": "Trở lại {{ event.recurrenceType }}",
+  "Resource reservation confirmed!": "Đã xác nhận đặt trước tài nguyên!"
+}

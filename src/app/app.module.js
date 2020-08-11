@@ -16,7 +16,8 @@ require('esn-frontend-common-libs/src/frontend/js/modules/i18n/i18n.module.js');
 require('esn-frontend-calendar/src/esn.calendar.libs/app/app.module.js');
 require('esn-frontend-calendar/src/esn.resource.libs/app/app.module.js');
 
-require('./app.constants.js');
+require('./app.config');
+require('./app.constants');
 require('./invitation-message/blue-bar/invitation-message-blue-bar.component.js');
 require('./invitation-message/blue-bar/invitation-message-blue-bar.controller.js');
 require('./invitation-message/indicator/invitation-message-indicator.component.js');
