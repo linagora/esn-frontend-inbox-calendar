@@ -9,6 +9,7 @@
   "Cannot change your participation to this event": "Impossible de modifier votre participation à cet événement",
   "Error while getting updated event": "Une erreur s'est produite en récupérant l'évènement mis à jour",
   "Event details": "Détails de l'événement",
+  "has been requested for event": "a été demandé pour l'événement",
   "Some meeting information contained in this message cannot be processed.": "Certaines informations ne peuvent pas être analysées sur cet événement.",
   "The resource reservation event can not be retrieved.": "L'évènement lié à la réservation de la ressource n'a pas pu être chargé.",
   "This event has been cancelled": "Cet événement a été annulé",

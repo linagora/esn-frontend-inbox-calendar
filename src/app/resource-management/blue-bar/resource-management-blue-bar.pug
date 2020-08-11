@@ -18,7 +18,7 @@
 
   .cal-blue-bar-info-and-actions.ellipsis(ng-if="$ctrl.resource && $ctrl.event")
     .cal-blue-bar-info
-      .cal-blue-bar-summary.ellipsis {{ $ctrl.resource.name }} has been requested for event {{ $ctrl.event.summary }}
+      .cal-blue-bar-summary.ellipsis {{ $ctrl.resource.name }} {{ 'has been requested for event' | translate }} {{ $ctrl.event.summary }}
     .cal-blue-bar-date.cal-blue-bar-labelled-value.ellipsis
       i.cal-blue-bar-label.mdi.mdi-clock
       span.cal-blue-bar-value {{ $ctrl.event.start | amDateFormat:'lll' }} {{ 'to' | translate }} {{ $ctrl.event.end | amDateFormat:'lll' }}

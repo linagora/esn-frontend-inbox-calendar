@@ -9,6 +9,7 @@
   "Cannot change your participation to this event": "无法更改您对此活动的参与",
   "Error while getting updated event": "获取更新事件时出错",
   "Event details": "事件详细信息",
+  "has been requested for event": "已被要求参加活动",
   "Some meeting information contained in this message cannot be processed.": "无法处理此消息内所含的某些会议信息",
   "The resource reservation event can not be retrieved.": "资源预定事件无法被撤回",
   "This event has been cancelled": "该事件已被删除",

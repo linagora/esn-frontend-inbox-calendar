@@ -9,6 +9,7 @@
   "Cannot change your participation to this event": "Невозможно изменить свое участие в этом мероприятии",
   "Error while getting updated event": "Ошибка при обновлении события",
   "Event details": "Детали события",
+  "has been requested for event": "был запрошен на мероприятие",
   "Some meeting information contained in this message cannot be processed.": "Некоторая информация о собрании, содержащаяся в этом сообщении, не может быть обработана.",
   "The resource reservation event can not be retrieved.": "Событие резервирования ресурса не может быть получено.",
   "This event has been cancelled": "Это событие было отменено",

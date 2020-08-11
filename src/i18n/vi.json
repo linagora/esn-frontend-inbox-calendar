@@ -9,6 +9,7 @@
   "Cannot change your participation to this event": "Không thể thay đổi sự tham gia của bạn đối với sự kiện này",
   "Error while getting updated event": "Lỗi khi nhận sự kiện được cập nhật",
   "Event details": "Chi tiết sự kiện",
+  "has been requested for event": "đã được yêu cầu cho sự kiện",
   "Some meeting information contained in this message cannot be processed.": "Tin nhắn này chứa một số thông tin không thể truy cập.",
   "The resource reservation event can not be retrieved.": "Không thể truy xuất sự kiện đặt trước tài nguyên.",
   "This event has been cancelled": "Sự kiện này đã bị hủy",
