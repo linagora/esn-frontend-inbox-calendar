@@ -1,0 +1,21 @@
+{
+  "%s has accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} a accepté cet évènement",
+  "%s has declined this event": "{{ replyAttendee.displayName || replyAttendee.email }} a décliné cet évènement",
+  "%s has tentatively accepted this event": "{{ replyAttendee.displayName || replyAttendee.email }} a provisoirement accepté cet évènement",
+  "An error occured while getting resource reservation contained in this message.": "Une erreur est survenue en chargeant la réservation de ressource contenue dans ce message.",
+  "An error occured while processing meeting information contained in this message.": "Nous avons rencontré une erreur lors de l'analyse des informations d'événement contenu dans ce message.",
+  "As resource manager, you must accept or decline the request": "En temps que gestionnaire des ressources, vous devez accepter ou refuser la requête",
+  "Cannot change the resource reservation": "Impossible de modifier la réservation de ressources",
+  "Cannot change your participation to this event": "Impossible de modifier votre participation à cet événement",
+  "Error while getting updated event": "Une erreur s'est produite en récupérant l'évènement mis à jour",
+  "Event details": "Détails de l'événement",
+  "Some meeting information contained in this message cannot be processed.": "Certaines informations ne peuvent pas être analysées sur cet événement.",
+  "The resource reservation event can not be retrieved.": "L'évènement lié à la réservation de la ressource n'a pas pu être chargé.",
+  "This event has been cancelled": "Cet événement a été annulé",
+  "This message contains an invitation to an event": "Ce message contient une invitation à un événement",
+  "This message contains an resource to manage": "Ce message contient une ressource à gérer",
+  "This message contains some meeting information. Please wait while we fetch the event details...": "Ce message contient des informations d'événement. Merci de patienter pendant que nous récupérons les détails de l'événement",
+  "This message contains some resource reservation information. Please wait while we fetch the event details...": "Ce message contient des informations sur la réservation d'une ressource. Merci de patienter pendant le chargement...",
+  "Recurs %s": "est récurrent {{ event.recurrenceType }}",
+  "Resource reservation confirmed!": "Réservation de ressources confirmée!"
+}
