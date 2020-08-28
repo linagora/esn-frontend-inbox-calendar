@@ -39,11 +39,11 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
   }
 
   beforeEach(function() {
-    module('esn.calendar');
+    angular.mock.module('esn.inbox-calendar');
 
     calOpenEventForm = sinon.spy();
 
-    module(function($provide) {
+    angular.mock.module(function($provide) {
       $provide.value('calOpenEventForm', calOpenEventForm);
       $provide.value('calendarHomeService', {
         getUserCalendarHomeId: function() {
@@ -74,14 +74,13 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
     CalendarShell = _CalendarShell_;
     calEventService = _calEventService_;
     session = _session_;
-
     ICAL = _ICAL_;
     INVITATION_MESSAGE_HEADERS = _INVITATION_MESSAGE_HEADERS_;
   }));
 
   beforeEach(function() {
     ['event', 'recurringEventWithTwoExceptions', 'singleWithAttendees', 'singleWithoutAttendee', 'eventRequestRegular'].forEach(function(file) {
-      shells[file] = new CalendarShell(ICAL.Component.fromString(__FIXTURES__[('frontend/app/fixtures/calendar/' + file + '.ics')]), {
+      shells[file] = new CalendarShell(ICAL.Component.fromString(__FIXTURES__[('src/fixtures/calendar/' + file + '.ics')]), {
         etag: 'etag',
         path: 'path'
       });

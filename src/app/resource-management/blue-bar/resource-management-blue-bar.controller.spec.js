@@ -5,11 +5,10 @@
 var expect = chai.expect;
 
 describe('The calInboxResourceManagementBlueBarController', function() {
-  var esnResourceAPIClient, eventId, attendeeEmail, esnResourceService, notifySpy, notificationFactory, calResourceService, resource, eventPath, headers, event, calEventService, $controller, $rootScope, $scope, context, $q, X_OPENPAAS_CAL_HEADERS, CAL_ICAL;
+  var esnResourceAPIClient, eventId, attendeeEmail, esnResourceService, notificationFactory, notificationFactoryMock, calResourceService, resource, eventPath, headers, event, calEventService, $controller, $rootScope, $scope, context, $q, X_OPENPAAS_CAL_HEADERS, CAL_ICAL;
 
   beforeEach(function() {
-    module('jadeTemplates');
-    angular.mock.module('esn-frontend-inbox-calendar');
+    angular.mock.module('esn.inbox-calendar');
   });
 
   beforeEach(function() {
@@ -34,13 +33,17 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     esnResourceService = {
       getEmail: sinon.stub().returns(attendeeEmail)
     };
+    notificationFactoryMock = {
+      weakInfo: sinon.spy(),
+    };
     eventPath = '/foo/bar.ics';
 
-    module(function($provide) {
+    angular.mock.module(function($provide) {
       $provide.value('esnResourceAPIClient', esnResourceAPIClient);
       $provide.value('esnResourceService', esnResourceService);
       $provide.value('calEventService', calEventService);
       $provide.value('calResourceService', calResourceService);
+      $provide.value('notificationFactory', notificationFactoryMock);
     });
   });
 
@@ -60,8 +63,6 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     context.message = {
       headers: headers
     };
-
-    notifySpy = sinon.spy(notificationFactory, 'weakInfo');
   });
 
   function initController() {
@@ -206,7 +207,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.acceptResourceReservation).to.not.have.been.called;
-      expect(notifySpy).to.not.have.been.called;
+      expect(notificationFactoryMock.weakInfo).to.not.have.been.called;
     });
 
     it('should call the resource service correctly', function() {
@@ -226,7 +227,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.acceptResourceReservation).to.have.been.calledWith(resource._id, eventId);
-      expect(notifySpy).to.have.been.calledWith('', sinon.match(/Resource reservation confirmed!/));
+      expect(notificationFactoryMock.weakInfo).to.have.been.calledWith('', sinon.match(/Resource reservation confirmed!/));
     });
 
     it('should notify on error', function() {
@@ -246,7 +247,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.acceptResourceReservation).to.have.been.calledWith(resource._id, eventId);
-      expect(notifySpy).to.have.been.calledWith('', sinon.match(/Cannot change the resource reservation/));
+      expect(notificationFactoryMock.weakInfo).to.have.been.calledWith('', sinon.match(/Cannot change the resource reservation/));
     });
   });
 
@@ -271,7 +272,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.declineResourceReservation).to.not.have.been.called;
-      expect(notifySpy).to.not.have.been.called;
+      expect(notificationFactoryMock.weakInfo).to.not.have.been.called;
     });
 
     it('should call the resource service correctly', function() {
@@ -291,7 +292,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.declineResourceReservation).to.have.been.calledWith(resource._id, eventId);
-      expect(notifySpy).to.have.been.calledWith('', sinon.match(/Resource reservation declined!/));
+      expect(notificationFactoryMock.weakInfo).to.have.been.calledWith('', sinon.match(/Resource reservation declined!/));
     });
 
     it('should notify on error', function() {
@@ -311,7 +312,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       $rootScope.$digest();
 
       expect(calResourceService.declineResourceReservation).to.have.been.calledWith(resource._id, eventId);
-      expect(notifySpy).to.have.been.calledWith('', sinon.match(/Cannot change the resource reservation/));
+      expect(notificationFactoryMock.weakInfo).to.have.been.calledWith('', sinon.match(/Cannot change the resource reservation/));
     });
   });
 
