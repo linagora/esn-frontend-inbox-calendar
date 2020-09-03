@@ -5,7 +5,7 @@
 var expect = chai.expect;
 
 describe('The calInboxResourceManagementBlueBarController', function() {
-  var esnResourceAPIClient, eventId, attendeeEmail, esnResourceService, notificationFactory, notificationFactoryMock, calResourceService, resource, eventPath, headers, event, calEventService, $controller, $rootScope, $scope, context, $q, X_OPENPAAS_CAL_HEADERS, CAL_ICAL;
+  var esnResourceAPIClient, eventId, attendeeEmail, esnResourceService, notificationFactoryMock, calResourceService, resource, eventPath, headers, event, calEventService, $controller, $rootScope, $scope, context, $q, X_OPENPAAS_CAL_HEADERS, CAL_ICAL;
 
   beforeEach(function() {
     angular.mock.module('esn.inbox-calendar');
@@ -18,7 +18,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       calendarHomeId: 'HomeId',
       attendees: []
     };
-    resource = {_id: 1};
+    resource = { _id: 1 };
     context = {};
     esnResourceAPIClient = {
       get: sinon.stub()
@@ -34,7 +34,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       getEmail: sinon.stub().returns(attendeeEmail)
     };
     notificationFactoryMock = {
-      weakInfo: sinon.spy(),
+      weakInfo: sinon.spy()
     };
     eventPath = '/foo/bar.ics';
 
@@ -47,11 +47,10 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     });
   });
 
-  beforeEach(angular.mock.inject(function(_$q_, _$controller_, _$rootScope_, _notificationFactory_, _X_OPENPAAS_CAL_HEADERS_, _CAL_ICAL_) {
+  beforeEach(angular.mock.inject(function(_$q_, _$controller_, _$rootScope_, _X_OPENPAAS_CAL_HEADERS_, _CAL_ICAL_) {
     $q = _$q_;
     $controller = _$controller_;
     $rootScope = _$rootScope_;
-    notificationFactory = _notificationFactory_;
     $scope = $rootScope.$new();
     X_OPENPAAS_CAL_HEADERS = _X_OPENPAAS_CAL_HEADERS_;
     CAL_ICAL = _CAL_ICAL_;
@@ -66,13 +65,13 @@ describe('The calInboxResourceManagementBlueBarController', function() {
   });
 
   function initController() {
-    return $controller('calInboxResourceManagementBlueBarController', {$scope: $scope}, context);
+    return $controller('calInboxResourceManagementBlueBarController', { $scope: $scope }, context);
   }
 
   describe('The $onInit function', function() {
     it('should get the event from the email header path', function() {
       calEventService.getEvent.returns($q.when(event));
-      esnResourceAPIClient.get.returns($q.when({data: resource}));
+      esnResourceAPIClient.get.returns($q.when({ data: resource }));
 
       var controller = initController();
 
@@ -93,7 +92,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       };
 
       calEventService.getEvent.returns($q.reject(error));
-      esnResourceAPIClient.get.returns($q.when({data: resource}));
+      esnResourceAPIClient.get.returns($q.when({ data: resource }));
 
       var controller = initController();
 
@@ -115,7 +114,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
       var error = new Error('I failed');
 
       calEventService.getEvent.returns($q.reject(error));
-      esnResourceAPIClient.get.returns($q.when({data: resource}));
+      esnResourceAPIClient.get.returns($q.when({ data: resource }));
 
       var controller = initController();
 
@@ -160,7 +159,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
 
       event.attendees.push({ email: attendeeEmail, partstat: partstat });
       calEventService.getEvent.returns($q.when(event));
-      esnResourceAPIClient.get.returns($q.when({data: resource}));
+      esnResourceAPIClient.get.returns($q.when({ data: resource }));
 
       var controller = initController();
 
@@ -174,7 +173,7 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     it('should set the default partstat when not available', function() {
       event.attendees.push({ email: attendeeEmail });
       calEventService.getEvent.returns($q.when(event));
-      esnResourceAPIClient.get.returns($q.when({data: resource}));
+      esnResourceAPIClient.get.returns($q.when({ data: resource }));
 
       var controller = initController();
 
@@ -190,8 +189,8 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     var resource, event;
 
     beforeEach(function() {
-      resource = {_id: 1};
-      event = {id: 2, attendees: []};
+      resource = { _id: 1 };
+      event = { id: 2, attendees: [] };
     });
 
     it('should not call the service if partstat is already ACCEPTED', function() {
@@ -255,8 +254,8 @@ describe('The calInboxResourceManagementBlueBarController', function() {
     var resource, event;
 
     beforeEach(function() {
-      resource = {_id: 1};
-      event = {id: 2, attendees: []};
+      resource = { _id: 1 };
+      event = { id: 2, attendees: [] };
     });
 
     it('should not call the service if partstat is already DECLINED', function() {

@@ -149,6 +149,7 @@ function calInboxInvitationMessageBlueBarController(
     if (currentUserIsOrganizer(event) || getUserAttendee(event)) {
       return event;
     }
+
     return $q.reject(new InvalidMeetingError('Event does not involve current user.'));
   }
 
@@ -206,7 +207,7 @@ function calInboxInvitationMessageBlueBarController(
     var relatedEvents = [];
 
     if (self.additionalEvent) {
-      relatedEvents.push({type: CAL_RELATED_EVENT_TYPES.COUNTER, event: self.additionalEvent, actor: self.replyAttendee});
+      relatedEvents.push({ type: CAL_RELATED_EVENT_TYPES.COUNTER, event: self.additionalEvent, actor: self.replyAttendee });
     }
 
     calOpenEventForm(self.userCalendarHomeId, self.event, relatedEvents);

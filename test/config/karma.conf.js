@@ -42,7 +42,7 @@ module.exports = function(config) {
 
     preprocessors: {
       'src/index.test.js': ['webpack'],
-      'src/fixtures/**': ['raw2js'],
+      'src/fixtures/**': ['raw2js']
     },
 
     webpack: webpackConfig,
@@ -53,6 +53,6 @@ module.exports = function(config) {
       'karma-spec-reporter',
       'karma-sinon-chai',
       'karma-rawfixtures-preprocessor'
-    ],
+    ]
   });
 };

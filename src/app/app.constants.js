@@ -20,4 +20,3 @@ angular.module('esn.inbox-calendar')
   })
 
   .constant('X_OPENPAAS_VIDEOCONFERENCE', 'X-OPENPAAS-VIDEOCONFERENCE');
-  

@@ -13,7 +13,7 @@ module.exports = merge(commonWebpackConfig, {
   devtool: 'source-map',
   output: {
     filename: 'bundle-test.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new webpack.NormalModuleReplacementPlugin(
@@ -22,17 +22,17 @@ module.exports = merge(commonWebpackConfig, {
     ),
     new webpack.ProvidePlugin({
       chai: chaiPath,
-      _: lodashPath,
+      _: lodashPath
     })
   ],
   module: {
     rules: [
-      { 
+      {
         test: /\.run.js$/,
         loader: 'ignore-loader',
         include: [
-          path.resolve(__dirname, 'node_modules/esn-frontend-calendar/src/linagora.esn.calendar/app/search/search.run.js'),
-        ] 
+          path.resolve(__dirname, 'node_modules/esn-frontend-calendar/src/linagora.esn.calendar/app/search/search.run.js')
+        ]
       }
     ]
   }

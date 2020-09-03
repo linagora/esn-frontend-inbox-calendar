@@ -8,5 +8,5 @@ angular.module('esn.inbox-calendar')
     bindings: {
       message: '<'
     },
-    template: require("./resource-management-blue-bar.pug")
+    template: require('./resource-management-blue-bar.pug')
   });
