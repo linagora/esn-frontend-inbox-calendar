@@ -8,5 +8,5 @@ angular.module('esn.inbox-calendar')
     bindings: {
       message: '<'
     },
-    template: require("./invitation-message-blue-bar.pug")
+    template: require('./invitation-message-blue-bar.pug')
   });

@@ -66,8 +66,7 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
     });
   });
 
-  beforeEach(inject(function(_$componentController_, _$q_, _$rootScope_, _CalendarShell_, _calEventService_, _session_,
-                             _ICAL_, _INVITATION_MESSAGE_HEADERS_) {
+  beforeEach(inject(function(_$componentController_, _$q_, _$rootScope_, _CalendarShell_, _calEventService_, _session_, _ICAL_, _INVITATION_MESSAGE_HEADERS_) {
     $componentController = _$componentController_;
     $q = _$q_;
     $rootScope = _$rootScope_;

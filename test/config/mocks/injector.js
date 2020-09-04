@@ -1,4 +1,5 @@
 'use strict';
+
 angular.module('esn.test.injector', []).run(function($q) {
   window.$q = $q;
 });
