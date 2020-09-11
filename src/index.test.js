@@ -7,7 +7,6 @@ require('esn-frontend-common-libs/src/frontend/js/modules/session.js');
 require('esn-frontend-videoconference-calendar/src/linagora.esn.videoconference/app/videoconference.module.js');
 require('esn-frontend-videoconference-calendar/src/linagora.esn.videoconference.calendar/app/videoconference-calendar.module.js');
 require('fullcalendar/dist/fullcalendar.js');
-require('esn-frontend-mailto-handler/src/index.js');
 require('angular-mocks/angular-mocks.js');
 
 require('./app/app.module.js');
