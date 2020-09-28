@@ -124,7 +124,7 @@ function calInboxInvitationMessageBlueBarController(
   function selectMasterEventOrOccurence(event) {
     var result = event;
 
-    if (self.meeting.recurrenceId) {
+    if (self.meeting.recurrenceId && event.isRecurring()) {
       var date = calMoment(self.meeting.recurrenceId);
 
       result = event.expand(date.clone().subtract(1, 'day'), date.clone().add(1, 'day'))[0] || event;
@@ -134,7 +134,7 @@ function calInboxInvitationMessageBlueBarController(
   }
 
   function selectMasterEventOrException(event) {
-    if (self.meeting.recurrenceId) {
+    if (self.meeting.recurrenceId && event.isRecurring()) {
       event = event.getExceptionByRecurrenceId(self.meeting.recurrenceId);
 
       if (!event) {

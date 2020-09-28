@@ -78,7 +78,7 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
   }));
 
   beforeEach(function() {
-    ['event', 'recurringEventWithTwoExceptions', 'singleWithAttendees', 'singleWithoutAttendee', 'eventRequestRegular'].forEach(function(file) {
+    ['event', 'recurringEventWithTwoExceptions', 'singleWithAttendees', 'singleWithoutAttendee', 'eventRequestRegular', 'recurrenceExceptionOnly'].forEach(function(file) {
       shells[file] = new CalendarShell(ICAL.Component.fromString(__FIXTURES__[('src/fixtures/calendar/' + file + '.ics')]), {
         etag: 'etag',
         path: 'path'
@@ -182,6 +182,30 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
 
       expect(ctrl.meeting.invalid).to.equal(undefined);
       expect(ctrl.event).to.deep.equal(shells.singleWithAttendees);
+    });
+
+    it('should correctly set the recurrence exception when method is COUNTER, recurrenceId is defined, and the iCal only contains the recurrence exception', function() {
+      var ctrl = initCtrl('COUNTER', '1234', '2', '20170115T100000Z');
+
+      session.user.emails = ['admin@linagora.com'];
+      calEventService.getEventByUID = qResolve(shells.recurrenceExceptionOnly);
+      ctrl.$onInit();
+      $rootScope.$digest();
+
+      expect(ctrl.meeting.invalid).to.equal(undefined);
+      expect(ctrl.event).to.equal(shells.recurrenceExceptionOnly);
+    });
+
+    it('should correctly set the recurrence exception when method is not COUNTER, recurrenceId is defined, and the iCal only contains the recurrence exception', function() {
+      var ctrl = initCtrl('REQUEST', '1234', '2', '20170115T100000Z');
+
+      session.user.emails = ['admin@linagora.com'];
+      calEventService.getEventByUID = qResolve(shells.recurrenceExceptionOnly);
+      ctrl.$onInit();
+      $rootScope.$digest();
+
+      expect(ctrl.meeting.invalid).to.equal(undefined);
+      expect(ctrl.event).to.equal(shells.recurrenceExceptionOnly);
     });
 
     it('should report an invalid meeting if the current user is not involved in the event', function() {
