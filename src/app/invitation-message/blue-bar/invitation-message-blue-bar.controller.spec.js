@@ -6,7 +6,7 @@ var expect = chai.expect;
 
 describe('The calInboxInvitationMessageBlueBarController', function() {
   var $componentController, $rootScope, $q, calOpenEventForm, calEventService, session, shells = {}, CalendarShell, ICAL, INVITATION_MESSAGE_HEADERS;
-
+  var esnI18nService;
   function initCtrl(method, uid, sequence, recurrenceId, sender, attachments) {
     var headers = {};
 
@@ -43,6 +43,12 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
 
     calOpenEventForm = sinon.spy();
 
+    esnI18nService = {
+      getLocale: function() {
+        return 'fr';
+      }
+    }
+
     angular.mock.module(function($provide) {
       $provide.value('calOpenEventForm', calOpenEventForm);
       $provide.value('calendarHomeService', {
@@ -63,6 +69,8 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
           return $q.when(shells.event);
         }
       });
+
+      $provide.value('esnI18nService', esnI18nService);
     });
   });
 
@@ -439,6 +447,19 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
       $rootScope.$digest();
 
       expect(ctrl.isActionable()).to.equal(false);
+    });
+  });
+
+
+  describe('The translateStartDate function', function () {
+    it('should translate the format of start date in the local language', function () {
+      var ctrl = initCtrl('REQUEST', '1234', '1');
+      const expectedLocale = 'fr';
+
+      ctrl.$onInit();
+      $rootScope.$digest();
+
+      expect(ctrl.event.start.locale()).to.equal(expectedLocale);
     });
   });
 });
