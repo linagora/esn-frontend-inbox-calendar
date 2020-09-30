@@ -223,5 +223,5 @@ function calInboxInvitationMessageBlueBarController(
   function translateStartDate() {
     self.event.start.locale(esnI18nService.getLocale());
   }
- 
+
 }

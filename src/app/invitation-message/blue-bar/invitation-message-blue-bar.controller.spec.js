@@ -7,6 +7,7 @@ var expect = chai.expect;
 describe('The calInboxInvitationMessageBlueBarController', function() {
   var $componentController, $rootScope, $q, calOpenEventForm, calEventService, session, shells = {}, CalendarShell, ICAL, INVITATION_MESSAGE_HEADERS;
   var esnI18nService;
+
   function initCtrl(method, uid, sequence, recurrenceId, sender, attachments) {
     var headers = {};
 
@@ -47,7 +48,7 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
       getLocale: function() {
         return 'fr';
       }
-    }
+    };
 
     angular.mock.module(function($provide) {
       $provide.value('calOpenEventForm', calOpenEventForm);
@@ -450,9 +451,8 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
     });
   });
 
-
-  describe('The translateStartDate function', function () {
-    it('should translate the format of start date in the local language', function () {
+  describe('The translateStartDate function', function() {
+    it('should translate the format of start date in the local language', function() {
       var ctrl = initCtrl('REQUEST', '1234', '1');
       const expectedLocale = 'fr';
 
