@@ -15,6 +15,7 @@ function calInboxInvitationMessageBlueBarController(
   calendarHomeService,
   calEventUtils,
   calMoment,
+  esnI18nService,
   calOpenEventForm,
   calEventDateSuggestionModal,
   calPartstatUpdateNotificationService,
@@ -58,6 +59,7 @@ function calInboxInvitationMessageBlueBarController(
       .then(bindReplyAttendeeToController)
       .then(bindCanSuggestChanges)
       .then(fetchAdditionalData)
+      .then(translateStartDate)
       .catch(handleErrorOrInvalidMeeting)
       .finally(function() {
         self.meeting.loaded = true;
@@ -217,4 +219,9 @@ function calInboxInvitationMessageBlueBarController(
     this.message = message;
     this.meeting = self.meeting;
   }
+
+  function translateStartDate() {
+    self.event.start.locale(esnI18nService.getLocale());
+  }
+
 }
