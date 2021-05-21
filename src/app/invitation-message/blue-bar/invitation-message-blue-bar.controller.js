@@ -54,7 +54,6 @@ function calInboxInvitationMessageBlueBarController(
       .then(getEventByUID)
       .then(selectEvent, handleNonExistentEvent)
       .then(assertEventInvolvesCurrentUser)
-      .then(assertInvitationSequenceIsNotOutdated)
       .then(bindEventToController)
       .then(bindReplyAttendeeToController)
       .then(bindCanSuggestChanges)
@@ -155,6 +154,7 @@ function calInboxInvitationMessageBlueBarController(
     return $q.reject(new InvalidMeetingError('Event does not involve current user.'));
   }
 
+  // This function throw an error when the event is updated 
   function assertInvitationSequenceIsNotOutdated(event) {
     if (+self.meeting.sequence < +event.sequence) {
       return $q.reject(new InvalidMeetingError('Sequence is outdated (event.sequence = ' + event.sequence + ').'));
