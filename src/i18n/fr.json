@@ -17,6 +17,7 @@
   "This message contains an resource to manage": "Ce message contient une ressource à gérer",
   "This message contains some meeting information. Please wait while we fetch the event details...": "Ce message contient des informations d'événement. Merci de patienter pendant que nous récupérons les détails de l'événement",
   "This message contains some resource reservation information. Please wait while we fetch the event details...": "Ce message contient des informations sur la réservation d'une ressource. Merci de patienter pendant le chargement...",
+  "This event was outdated. Please check the latest updates": "Cet événement est obsolète. Veuillez consulter les dernières mises à jour",
   "Recurs %s": "est récurrent {{ event.recurrenceType }}",
   "Resource reservation confirmed!": "Réservation de ressources confirmée!"
 }

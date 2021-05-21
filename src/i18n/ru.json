@@ -17,6 +17,7 @@
   "This message contains an resource to manage": "Это сообщение содержит ресурс для управления",
   "This message contains some meeting information. Please wait while we fetch the event details...": "Это сообщение содержит некоторую информацию о встрече. Пожалуйста, подождите, пока мы получим информацию о событии ...",
   "This message contains some resource reservation information. Please wait while we fetch the event details...": "Это сообщение содержит некоторую информацию о резервировании ресурса. Пожалуйста, подождите, пока мы получим информацию о событии ...",
+  "This event was outdated. Please check the latest updates": "Это событие устарело. Проверьте последние обновления.",
   "Recurs %s": "рецидивировать {{ event.recurrenceType }}",
   "Resource reservation confirmed!": "Резервирование ресурсов подтверждено!"
 }

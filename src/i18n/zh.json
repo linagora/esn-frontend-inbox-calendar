@@ -17,6 +17,7 @@
   "This message contains an resource to manage": "本条消息包含一个待管理资源",
   "This message contains some meeting information. Please wait while we fetch the event details...": "本条消息包含会议信息。请等待，我们正在获取事件详细信息…",
   "This message contains some resource reservation information. Please wait while we fetch the event details...": "本条消息包含资源预定信息。请等待，我们正在获取事件详细信息…",
+  "This event was outdated. Please check the latest updates": "该活动已过时。请检查最新更新",
   "Recurs %s": "{{ event.recurrenceType }}重复",
   "Resource reservation confirmed!": "资源预留已确认!"
 }

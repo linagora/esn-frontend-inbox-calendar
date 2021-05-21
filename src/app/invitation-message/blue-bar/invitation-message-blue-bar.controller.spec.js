@@ -248,7 +248,8 @@ describe('The calInboxInvitationMessageBlueBarController', function() {
       ctrl.$onInit();
       $rootScope.$digest();
 
-      expect(ctrl.meeting.invalid).to.equal(true);
+      expect(ctrl.meeting.invalid).to.be.false;
+      expect(ctrl.isOutdated).to.be.true;
     });
 
     it('should expose the event', function() {

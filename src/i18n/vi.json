@@ -17,6 +17,7 @@
   "This message contains an resource to manage": "Thư này chứa một tài nguyên để quản lý",
   "This message contains some meeting information. Please wait while we fetch the event details...": "Tin nhắn này chứa thông tin cuộc họp. Vui lòng đợi trong khi tải các thông tin chi tiết...",
   "This message contains some resource reservation information. Please wait while we fetch the event details...": "Thông báo này chứa một số thông tin đặt chỗ tài nguyên. Vui lòng đợi trong khi chúng tôi tìm nạp chi tiết sự kiện...",
+  "This event was outdated. Please check the latest updates": "Sự kiện này đã lỗi thời. Vui lòng kiểm tra các bản cập nhật mới nhất.",
   "Recurs %s": "Trở lại {{ event.recurrenceType }}",
   "Resource reservation confirmed!": "Đã xác nhận đặt trước tài nguyên!"
 }
