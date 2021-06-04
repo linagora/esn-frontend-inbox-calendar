@@ -13,7 +13,6 @@ const pugLoaderOptions = {
 };
 
 const BASE_HREF = process.env.BASE_HREF || '/';
-const OPENPAAS_URL = process.env.OPENPAAS_URL || 'http://localhost:8080';
 
 module.exports = {
   mode: 'development',
@@ -45,36 +44,7 @@ module.exports = {
     contentBase: [path.join(__dirname, 'dist'), path.resolve(__dirname, 'node_modules', 'esn-frontend-login', 'dist')],
     contentBasePublicPath: [BASE_HREF, '/login'],
     compress: true,
-    port: 9900,
-    proxy: [{
-      context: [
-        '/auth',
-        '/api',
-        '/logout',
-        '/views',
-        '/account/api',
-        '/profile/app',
-        '/controlcenter/app',
-        '/images',
-        '/socket.io/',
-        '/user-status/app/bubble/',
-        '/user-status/api',
-        '/contact/app',
-        '/contact/images',
-        '/dav/api',
-        '/unifiedinbox/views',
-        '/unifiedinbox/app',
-        '/unifiedinbox/api',
-        '/calendar/app',
-        '/calendar/api',
-        '/linagora.esn.resource/api'
-      ],
-      target: OPENPAAS_URL,
-      disableHostCheck: true,
-      secure: false,
-      changeOrigin: true,
-      withCredentials: true
-    }]
+    port: 9900
   },
   module: {
     rules: [
